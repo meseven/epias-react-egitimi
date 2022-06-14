@@ -1,12 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 
-function User(props) {
+function User({ data }) {
+  const [user, setUser] = useState(data);
+
+  const handleChange = () => {
+    setUser((prev) => ({ ...prev, id: 2 }));
+  };
+
   return (
     <div>
       User
       <div>
-        <pre>{JSON.stringify(props.data, null, 2)}</pre>
+        <pre>{JSON.stringify(user, null, 2)}</pre>
       </div>
+      <button onClick={handleChange}>Click</button>
     </div>
   );
 }

@@ -14,21 +14,21 @@ function FormWithFormik() {
     isSubmitting,
   } = useFormik({
     initialValues: {
-      name: "test",
-      email: "testtt@test.com",
-      message: "deneme",
+      name: "",
+      email: "",
+      message: "",
       campaigns: "0",
       monthlyOrWeekly: "",
     },
     onSubmit: async (values, bag) => {
-      // await new Promise((r) => setTimeout(r, 1000));
+      await new Promise((r) => setTimeout(r, 1000));
       console.log("values", values);
 
       if (values.email === "test@test.com") {
         return bag.setFieldError("email", "Bu mail adresi zaten kullanımda.");
       }
 
-      // bag.resetForm();
+      bag.resetForm();
     },
     validationSchema,
   });

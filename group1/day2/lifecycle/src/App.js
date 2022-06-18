@@ -1,10 +1,11 @@
-import { useState } from "react";
+// import { useState } from "react";
 import "./App.css";
-import Counter from "./components/Counter";
-import Users from "./components/Users";
+import ConvertToUSD from "./components/ConvertToUSD";
+// import Counter from "./components/Counter";
+// import Users from "./components/Users";
 
 function App() {
-  const [isVisible, setIsVisible] = useState(true);
+  // const [isVisible, setIsVisible] = useState(true);
 
   return (
     <div className="App">
@@ -14,7 +15,9 @@ function App() {
       <br />
       <button onClick={() => setIsVisible(!isVisible)}>Göster/Gizle</button> */}
 
-      <Users />
+      {/* <Users /> */}
+
+      <ConvertToUSD />
     </div>
   );
 }

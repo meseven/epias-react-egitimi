@@ -1,5 +1,5 @@
-import axios from "axios";
 import React, { useState, useEffect } from "react";
+import axios from "axios";
 import Loading from "../Loading";
 
 function Detail({ activeUserId }) {

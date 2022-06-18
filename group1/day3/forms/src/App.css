@@ -10,7 +10,7 @@
   display: block;
 }
 
-.contact-form > div input,
+.contact-form > div input[type="text"],
 textarea {
   width: 200px;
   padding: 10px;
@@ -25,4 +25,8 @@ textarea {
   border-radius: 3px;
   font-size: 1.1rem;
   cursor: pointer;
+}
+
+.error {
+  color: red;
 }

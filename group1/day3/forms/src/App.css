@@ -1,0 +1,28 @@
+.contact-form {
+  padding: 20px;
+}
+
+.contact-form > div {
+  margin-bottom: 10px;
+}
+
+.contact-form > div label {
+  display: block;
+}
+
+.contact-form > div input,
+textarea {
+  width: 200px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 1.1rem;
+}
+
+.contact-form > div button {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}

@@ -33,3 +33,7 @@ code {
 .content {
   padding: 10px;
 }
+
+.pagination {
+  padding: 10px 0;
+}

@@ -12,6 +12,9 @@ function Menu() {
           <Link to="/users">Kullanıcılar</Link>
         </li>
         <li>
+          <Link to="/products">Ürünler</Link>
+        </li>
+        <li>
           <Link to="/contact">İletişim</Link>
         </li>
       </ul>

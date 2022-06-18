@@ -4,6 +4,7 @@ import Menu from "./components/Menu";
 // pages
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
+import Products from "./pages/Products";
 import UserDetail from "./pages/UserDetail";
 import Users from "./pages/Users";
 
@@ -17,6 +18,7 @@ function App() {
           <Route path="users" element={<Users />} />
           <Route path="users/:id" element={<UserDetail />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="products" element={<Products />} />
         </Routes>
       </div>
     </BrowserRouter>

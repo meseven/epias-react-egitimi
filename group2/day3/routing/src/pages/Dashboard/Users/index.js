@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { Outlet } from "react-router-dom";
 import List from "./List";
 
 function Users() {
@@ -15,6 +16,8 @@ function Users() {
     <div>
       <h2>Users</h2>
       <List users={users} />
+
+      <Outlet />
     </div>
   );
 }

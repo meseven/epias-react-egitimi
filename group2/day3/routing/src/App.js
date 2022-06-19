@@ -16,8 +16,9 @@ function App() {
       <Routes>
         <Route path="/" element={<DashboardLayout />}>
           <Route path="/" element={<Home />} />
-          <Route path="users" element={<Users />} />
-          <Route path="users/:id" element={<Detail />} />
+          <Route path="users" element={<Users />}>
+            <Route path=":id" element={<Detail />} />
+          </Route>
           <Route path="contact" element={<Contact />} />
         </Route>
 

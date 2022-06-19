@@ -7,6 +7,7 @@ function Converter() {
   const [money, setMoney] = useState(100);
 
   const fixedMoney = (money / USDTL).toFixed(2);
+
   return (
     <div className="converter">
       <div>

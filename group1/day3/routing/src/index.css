@@ -13,20 +13,26 @@ code {
 }
 
 .menu {
-  margin: 0;
-  padding: 10px 0;
-  list-style-type: none;
   display: flex;
   border-bottom: solid 2px #ddd;
+  justify-content: space-between;
+  padding: 10px;
 }
 
-.menu li a {
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.menu ul li a {
   padding: 10px;
   color: black;
   text-decoration: none;
 }
 
-.menu li a:hover {
+.menu ul li a:hover {
   text-decoration: underline;
 }
 
@@ -36,4 +42,56 @@ code {
 
 .pagination {
   padding: 10px 0;
+}
+
+.auth-layout {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.auth-content {
+  width: 400px;
+  padding: 20px;
+  background-color: #eee;
+  border-radius: 5px;
+}
+
+.auth-content input[type="text"],
+input[type="password"] {
+  width: 380px;
+  padding: 10px;
+  border: solid 1px #ddd;
+  border-radius: 5px;
+  margin-bottom: 4px;
+}
+
+.auth-content button {
+  width: 400px;
+  padding: 10px;
+  border: solid 1px #ddd;
+  border-radius: 5px;
+  background-color: #ddd;
+  color: black;
+  cursor: pointer;
+}
+
+.auth-content button:hover {
+  background-color: #eee;
+}
+
+.auth-menu {
+  padding: 10px;
+}
+
+.auth-menu > a {
+  padding: 10px;
+  color: black;
+  text-decoration: none;
+}
+
+.auth-menu > a:hover {
+  text-decoration: underline;
 }

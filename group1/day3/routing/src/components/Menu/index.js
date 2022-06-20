@@ -1,10 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Menu() {
+  const navigate = useNavigate();
+
   return (
-    <div>
-      <ul className="menu">
+    <div className="menu">
+      <button onClick={() => navigate(-1)}>Geri</button>
+
+      <ul>
         <li>
           <Link to="/">Anasayfa</Link>
         </li>
@@ -18,6 +22,8 @@ function Menu() {
           <Link to="/contact">İletişim</Link>
         </li>
       </ul>
+
+      <button onClick={() => navigate("/auth")}>Çıkış</button>
     </div>
   );
 }

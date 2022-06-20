@@ -20,7 +20,7 @@ function Products() {
 
   return (
     <div>
-      <h2>Posts</h2>
+      <h2>Ürünler</h2>
 
       {products &&
         products.map((product) => <div key={product.id}>{product.title}</div>)}

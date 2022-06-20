@@ -1,13 +1,22 @@
 import React, { useState } from "react";
 import useFetch from "../hooks/useFetch";
+import Error from "./Error";
+import Loading from "./Loading";
 
-console.log(process.env.REACT_APP_BASE_ENDPOINT);
 function FetchExample() {
   const [url, setUrl] = useState(
     `${process.env.REACT_APP_BASE_ENDPOINT}/users`
   );
 
   const { data, loading, error } = useFetch(url);
+
+  if (loading) {
+    return <Loading text="Yükleniyor..." />;
+  }
+
+  if (error) {
+    return <Error message={error} />;
+  }
 
   return (
     <div>
@@ -35,8 +44,6 @@ function FetchExample() {
         <option value="10">10</option>
       </select>
 
-      {loading && <div>Loading...</div>}
-      {error && <div>Error: {error}</div>}
       <pre>{data && JSON.stringify(data, null, 2)}</pre>
     </div>
   );

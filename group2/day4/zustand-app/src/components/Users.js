@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import useUsers from "../store/useUsers";
+import Form from "./Form";
 
 function Users() {
   const users = useUsers((state) => state.users);
@@ -12,6 +13,11 @@ function Users() {
   return (
     <div>
       <h2>Users</h2>
+
+      <Form />
+
+      <br />
+
       {users.map((user) => (
         <div key={user.id}>{user.name}</div>
       ))}

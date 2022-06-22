@@ -1,0 +1,23 @@
+.App {
+  text-align: center;
+}
+
+form {
+  margin: 10px 0;
+}
+
+form input,
+button[type="submit"] {
+  padding: 10px;
+  font-size: 1.05rem;
+}
+
+.list-item {
+  display: flex;
+  justify-content: center;
+  padding: 3px 0;
+}
+
+.list-item > div {
+  width: 200px;
+}

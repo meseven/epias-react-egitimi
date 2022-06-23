@@ -4,21 +4,30 @@ const http = require("http");
 const server = http.createServer(app);
 const { Server } = require("socket.io");
 const io = new Server(server);
-const encrypt = require("socket.io-encrypt");
-
-io.use(encrypt("super-secret-key"));
 
 app.get("/", (req, res) => {
   res.end("hello");
 });
 
+let onlineUsers = 0;
+
 io.on("connection", (socket) => {
-  console.log("a user connected");
+  console.log("Bir kullanıcı bağlandı.");
 
-  socket.on("new-color", (color) => {
-    console.log("New color: ", color);
+  onlineUsers += 1;
+  io.emit("info", onlineUsers);
 
-    socket.broadcast.emit("new-color", color);
+  // socket.on("new-color", (color) => {
+  //   console.log("New color: ", color);
+
+  //   socket.broadcast.emit("new-color", color);
+  // });
+
+  socket.on("disconnect", () => {
+    console.log("Bir kullanıcı ayrıldı.");
+
+    onlineUsers -= 1;
+    socket.broadcast.emit("info", onlineUsers);
   });
 });
 

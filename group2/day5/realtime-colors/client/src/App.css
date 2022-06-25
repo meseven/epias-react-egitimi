@@ -1,0 +1,26 @@
+.App {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.picker {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  padding: 6px;
+  cursor: pointer;
+}
+
+.active-color {
+  padding: 0px 15px;
+  background-color: aliceblue;
+  border-radius: 10px;
+}

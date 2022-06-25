@@ -1,0 +1,29 @@
+.App {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.picker {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 15px;
+}
+
+button {
+  padding: 5px;
+  cursor: pointer;
+}
+
+.color-text {
+  background-color: aliceblue;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 28px;
+  font-weight: 700;
+}

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { useTodo } from "../../context/TodoContext";
+import useStore from "../../store/useStore";
 
 function Form() {
   const [text, setText] = useState("");
-  const { addItem } = useTodo();
+  const addItem = useStore((state) => state.addItem);
 
   const handleSubmit = (e) => {
     e.preventDefault();

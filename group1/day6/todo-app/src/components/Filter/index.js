@@ -1,8 +1,12 @@
 import React from "react";
-import { useTodo } from "../../context/TodoContext";
+import useStore from "../../store/useStore";
 
 function Filter() {
-  const { todos, activeFilter, setActiveFilter, clearCompleted } = useTodo();
+  const todos = useStore((state) => state.todos);
+  const activeFilter = useStore((state) => state.activeFilter);
+  const setActiveFilter = useStore((state) => state.setActiveFilter);
+  const clearCompleted = useStore((state) => state.clearCompleted);
+
   const items_left = todos.filter((item) => !item.isCompleted).length;
   const isVisibleClearCompleted = todos.some((todo) => todo.isCompleted);
 

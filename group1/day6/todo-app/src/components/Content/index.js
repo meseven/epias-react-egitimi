@@ -1,9 +1,10 @@
 import React from "react";
-import { useTodo } from "../../context/TodoContext";
+import useStore from "../../store/useStore";
 import List from "./List";
 
 function Content() {
-  const { todos, toggleAll } = useTodo();
+  const todos = useStore((state) => state.todos);
+  const toggleAll = useStore((state) => state.toggleAll);
 
   const handleClick = () => {
     toggleAll();

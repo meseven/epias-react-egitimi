@@ -1,8 +1,9 @@
 import React from "react";
-import { useTodo } from "../../context/TodoContext";
+import useStore from "../../store/useStore";
 
 function Item({ todo }) {
-  const { toggle, removeItem } = useTodo();
+  const toggle = useStore((state) => state.toggle);
+  const removeItem = useStore((state) => state.removeItem);
 
   const handleChange = () => {
     toggle(todo.id);

@@ -1,13 +1,8 @@
 import "./App.css";
 import Container from "./components/Container";
-import { TodoContextProvider } from "./context/TodoContext";
 
 function App() {
-  return (
-    <TodoContextProvider>
-      <Container />
-    </TodoContextProvider>
-  );
+  return <Container />;
 }
 
 export default App;

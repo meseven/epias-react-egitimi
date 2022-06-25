@@ -1,10 +1,11 @@
 import React from "react";
-import { useTodo } from "../../context/TodoContext";
+import useStore from "../../store/useStore";
 import Item from "./Item";
 
 let filtered;
 function List() {
-  const { todos, activeFilter } = useTodo();
+  const todos = useStore((state) => state.todos);
+  const activeFilter = useStore((state) => state.activeFilter);
 
   filtered = [...todos];
 
